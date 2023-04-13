@@ -1,0 +1,75 @@
+%---------------FORMATO VISUAL DE TEXTO---------------------------%
+
+%---OBJETIVO---%
+
+% Mostrar el uso de los diferentes tamaños de texto que provee LaTeX.
+
+%-------------------------------------------------------------------%
+
+% Al diseñar un texto es importante poseer diferentes posibilidades de 
+% formas de resaltar algunas partes características del mismo, como: 
+% tamaños de fuente, texto en negrita, texto inclinado, texto subrayado, 
+% entre otras. Los códigos que permiten alterar el tamaño de la fuente son
+% los siguientes:
+%	-Fuente enana:	 			{\tiny   }
+%	-Fuente tanaño índice: 		{\scriptsize   }
+%	-Fuente tamaño nota de pie: {\footnotesize   }
+%	-Fuente pequeña:			{\small   }
+%	-Fuente grande:				{\large   }
+%	-Fuente muy grande:			{\Large   }
+%	-Fuente aún más grande:		{\LARGE   }
+%	-Fuente enorme:				{\huge   }
+%	-Fuente de mayor tamaño:	{\Huge   }
+
+% Es notable que cada modificador posee un juego de llaves luego de la línea de 
+% código que la representa. Esto es así debido a que allí se debe escribir el texto
+% que cambiará su tamaño.
+
+% El tamaño del texto que se altera es relativo al tamaño definido dentro del
+% documento en el \documentclass{}. 
+
+% Por otro lado, los códigos que permiten alterar la posición o el formato
+% de la fuente son:
+%	-Fuente negrita:	\textbf{}
+%	-Fuente subrayada: 	\underline{}
+%	-Fuente inclindado: \textit{}
+%	-Fuente enfatizada:	\emph{}
+%	-Fuente con mayusc: \scshape{}
+
+
+\documentclass[12pt]{article}
+
+\begin{document}
+	
+	\tiny{Texto comparativo de tamaño}
+	
+	\scriptsize{Texto comparativo de tamaño}
+	
+	\footnotesize{Texto comparativo de tamaño}
+	
+	\small{Texto comparativo de tamaño}
+	
+	Texto comparativo de tamaño
+	
+	{\large Texto comparativo de tamaño}
+	
+	{\Large Texto comparativo de tamaño}
+	
+	{\LARGE Texto comparativo de tamaño}
+	
+	{\huge Texto comparativo de tamaño}
+	
+	{\Huge Texto comparativo de tamaño}
+	
+		
+	\textbf{Texto comparativo de fuente}
+	
+	\underline{Texto comparativo de fuente}
+	
+	\textit{Texto comparativo de fuente}
+	
+	\emph{Texto comparativo de fuente}
+	
+	\scshape{Texto comparativo de fuente}
+
+\end{document}
