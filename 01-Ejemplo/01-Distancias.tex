@@ -1,0 +1,115 @@
+%---------------DEFINICIÓN DE DISTANCIAS---------------%
+
+%---OBJETIVO---%
+
+% Conocer las distancias existentes en LaTeX referidas al documento
+% y trabajar con ellas.
+
+%---------------------------------------------%
+
+% Usualmente, al querer trabajar con un documento es deseado conocer
+% y definir ciertas distancias entre elementos como:
+% 	- Espaciado vertical: \baselineskip
+% 	- Distancia entre columnas: \columnsep (caso de múltiples columnas).
+% 	- Ancho de columnas: \columnwidth (caso de múltiples columnas).
+% 	- Ancho de línea: \linewidth (del entorno actual).
+% 	- Ancho de margen: \oddsidemargin (usualmente en documentos de dos lados).
+% 	- Ancho de página: \paperwidth
+% 	- Alto de página: \paperheight
+% 	- Sangría de párrafo: \parindent
+% 	- Distancia entre párrafos: \parskip
+% 	- Altura del texto: \textheight (\paperheight - margenes verticales).
+% 	- Ancho del texto: \textwidth (\paperwidth - margenes horizontales).
+% 	- Altura del margen superior: \topmargin
+% 
+% Así como existen estas distancias, pueden crearse distancias independientes
+% o dependientes de otras existentes. 
+% 
+% Las distancias, como en cotidianidad, poseen unidades para ser medidas y 
+% definidas. Las unidades usuales en LaTeX son:
+% 	- puntos: pt
+% 	- milímetros: mm
+% 	- centímetros: cm
+% 	- pulgadas: in
+% 	- distancia x: ex (ancho de una x en "minúscula" en la fuente actual).
+% 	- distancia m: em (ancho de una M en "mayúscula" en la fuente actual).
+% entre otros.
+% 
+% La forma de definir una distancia se realiza mediante el comando
+%
+% \newlength{\nombre}
+%
+% Para definir su valor solo basta con el comando
+% 
+% \setlength{\nombre}{distancia}
+%
+% o si se busca que la distancia sea dependiente de otra
+%
+% \setlength{\nombre}{0.5\textwidth}
+%
+% Así como se pueden definir distancias nuevas, también pueden 
+% modificarse algunas de las existentes mediante el comando
+% \setlength. Estas son:
+%
+% 	-\baselineskip
+%	-\columnsep
+%	-\columnwidth
+%	-\oddsidemargin
+%	-\parskip
+%	-\parindent
+%	-\topmargin
+%	
+% El ancho de la página y el largo de la misma no pueden modificarse alternado
+% las distancias respectivas al papel. De todas maneras, luego se podrá ver que
+% esto no es inalterable.
+%
+% Por último, si se quiere trabajar con una relación algebraica dentro de la 
+% definición de la distancia, es posible mediante el uso del siguiente grupo de
+% comandos
+% 
+% \setlength{\nombre}{\dimexpr Expresión a utilizar \relax}
+%
+% A continuación se ven algunos ejemplos aplicados sobre un texto de referencia.
+ 
+% Definición de un documento de doble lado y dos columnas.
+\documentclass[twocolumn,twoside]{article}
+
+% Modificación del largo y el ancho del texto.
+\setlength{\textwidth}{5in}
+\setlength{\textheight}{5in}
+
+% Este par de distancias son las únicas que deben definirse
+% obligatoriamente antes de iniciar el entorno de documento.
+% Ya que al cargar el mismo, define los valores previamente.
+
+% Definición de una distancia
+\newlength{\distanciaA}
+\setlength{\distanciaA}{1in}
+ 
+
+\begin{document}
+	
+% Definición de una distancia
+
+\newlength{\distanciaB}
+\setlength{\distanciaB}{1in}
+
+	
+% Redefinición de distancias existentes.
+\setlength{\baselineskip}{\dimexpr(0.1\distanciaA +0.2\distanciaB)\relax}
+\setlength{\columnsep}{0.5in}
+\setlength{\columnwidth}{3in}
+\setlength{\oddsidemargin}{0.1in}
+\setlength{\parskip}{0.01\columnwidth}
+\setlength{\parindent}{2in}
+\setlength{\topmargin}{\dimexpr(2in+\distanciaA/\columnwidth)\relax}
+
+Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - 
+
+
+Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno -
+
+
+Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno - Texto de relleno -
+
+\end{document}
