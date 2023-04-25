@@ -1,0 +1,52 @@
+%---------------PORTADA--SIMPLE---------------------%
+
+%---OBJETIVO---%
+
+% Aprender como realizar una portada rápida en LaTeX
+
+%---------------------------------------------------%
+
+% Al realizar documentos con el objetivo de trabajos
+% prácticos, presentaciones, informes, etc. Se requiere
+% poseer una presentación mínima sobre el tema que trata
+% este y demás datos importantes que caracterizan al
+% documento. Por lo tanto, si se dispone de una portada
+% es posible alojar todos estos datos.
+
+% Las características básicas de una portada son:
+%	-Título: \title{}
+%	-Autor: \author{}
+%	-Fecha: \date{}
+%	-Agradecimientos: \thanks{}
+% De estas cuatro las tres primeras se definen como un 
+% comando individual, y los agradecimientos se disponen
+% dentro de alguno de los comandos de autor o título como
+% se ve en el ejemplo.
+
+% Estos datos se definen fuera del comienzo del documento
+% y para poder hacer que aparezca la página de título se 
+% dispone del comando \maketitle.
+
+\title{Documento para portada de \LaTeX\thanks{Agradecimientos 1}}
+\author{Grupo \LaTeX\thanks{Agradecimientos 2}}
+\date{23 de abril de 2023}
+
+\documentclass{article}
+
+\begin{document}
+	
+	\maketitle
+	
+	\section{Introducción}
+	
+	Texto de relleno de introducción.
+	Texto de relleno de introducción.
+	Texto de relleno de introducción.
+	Texto de relleno de introducción.
+	Texto de relleno de introducción.
+	Texto de relleno de introducción.
+	Texto de relleno de introducción.
+	Texto de relleno de introducción.
+	Texto de relleno de introducción.
+	
+\end{document}
