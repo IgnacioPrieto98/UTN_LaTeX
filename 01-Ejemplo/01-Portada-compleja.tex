@@ -6,3 +6,58 @@
 
 %---------------------------------------------------%
 
+% Anteriormente, en el ejemplo 01-Portada simple se realizó una
+% portada la cual presenta características primitivas de un 
+% documento. Aun así, puede resultar necesario presentar
+% más información en la portada.
+% 
+% Por este motivo se recurre a un entorno denominado pagina de 
+% título (titlepage) en el cual se define una hoja que posee
+% todo el contenido deseado.
+% 
+ 
+% Para poder crear dicho entorno se abre un entorno con el comando
+% \begin{titlepage} y se lo cierra con el comando \end{titlepage}.
+% Dentro de este se especifica el contenido que se quiere presentar.
+% 
+
+
+\documentclass[titlepage]{article}
+
+
+
+\begin{document}
+	 \begin{titlepage}
+		
+		\setlength{\parskip}{1cm}
+		
+		\centering
+		
+		{\LARGE\scshape Título del documento}\\
+		
+		{\large Subtítulo del documento}\\
+		
+		\raggedright
+		
+		\vspace{1cm}
+		
+		\textbf{Resumen:}
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum. Posuere morbi leo urna molestie at. Tellus orci ac auctor augue mauris augue neque gravida. Id porta nibh venenatis cras sed felis. Ultrices tincidunt arcu non sodales. Aliquam id diam maecenas ultricies. Tortor condimentum lacinia quis vel eros donec ac odio tempor. Aliquet eget sit amet tellus cras. Dolor morbi non arcu risus. Lacus vel facilisis volutpat est velit egestas. Volutpat consequat mauris nunc congue. Cras pulvinar mattis nunc sed blandit libero volutpat. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus.
+		
+		\textbf{Palabras clave:}
+		Documento - \LaTeX - Escritura - Ejemplo - Lenguaje de marcado.
+		
+		\textbf{Desarrollador:}
+		Grupo \LaTeX\ - UTN
+		
+	\end{titlepage}
+
+\section{Párrafo 1}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum. Posuere morbi leo urna molestie at. Tellus orci ac auctor augue mauris augue neque gravida. Id porta nibh venenatis cras sed felis. Ultrices tincidunt arcu non sodales. Aliquam id diam maecenas ultricies. Tortor condimentum lacinia quis vel eros donec ac odio tempor. Aliquet eget sit amet tellus cras. Dolor morbi non arcu risus. Lacus vel facilisis volutpat est velit egestas. Volutpat consequat mauris nunc congue. Cras pulvinar mattis nunc sed blandit libero volutpat. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum. Posuere morbi leo urna molestie at. Tellus orci ac auctor augue mauris augue neque gravida. Id porta nibh venenatis cras sed felis. Ultrices tincidunt arcu non sodales. Aliquam id diam maecenas ultricies. Tortor condimentum lacinia quis vel eros donec ac odio tempor. Aliquet eget sit amet tellus cras. Dolor morbi non arcu risus. Lacus vel facilisis volutpat est velit egestas. Volutpat consequat mauris nunc congue. Cras pulvinar mattis nunc sed blandit libero volutpat. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus.
+
+\section{Párrafo 2}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum. Posuere morbi leo urna molestie at. Tellus orci ac auctor augue mauris augue neque gravida. Id porta nibh venenatis cras sed felis. Ultrices tincidunt arcu non sodales. Aliquam id diam maecenas ultricies. Tortor condimentum lacinia quis vel eros donec ac odio tempor. Aliquet eget sit amet tellus cras. Dolor morbi non arcu risus. Lacus vel facilisis volutpat est velit egestas. Volutpat consequat mauris nunc congue. Cras pulvinar mattis nunc sed blandit libero volutpat. Amet luctus venenatis lectus magna fringilla urna porttitor rhoncus.	
+
+\end{document}

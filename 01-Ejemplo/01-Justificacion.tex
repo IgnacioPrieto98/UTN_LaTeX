@@ -1,0 +1,91 @@
+%----------POSICIONAMIENTO Y DISTANCIAS--------------%
+
+%---OBJETIVO---%
+
+% Aprender como centrar, justificar, alinear los lados 
+% el texto.
+% 
+% Aprender a separar elementos en distancias definidas
+% verticales y horizontales.
+
+%---------------------------------------------------%
+
+% Usualmente en los textos se utiliza el cambio de pos.
+% del texto para realizar énfasis en lo que se está des-
+% plazando; ya sea un título, un subtítulo, una ecuación
+% una tabla, etc. Para poder realizar esto en un documento
+% es posible utilizar entornos o líneas de código. 
+% 
+% La diferencia entre trabajar con entornos y con líneas
+% de código no es amplia para realizar el desplazamiento 
+% en si. Aun así, se debe saber que si se trabaja con
+% entornos, todo lo que se aplique dentro de estos solo
+% afectará a lo que esté adentro del mismo. Permitiendo 
+% modificar fácilmente el contenido del entorno. Acción
+% que no es posible mediante la línea de código. 
+% A continuación se muestra como realizar ambas.  
+
+% Para realizar el desplazamiento del texto por entornos
+% se recurre a los siguientes nombres de entorno:
+% 	- Centrado: center
+% 	- Desplazado a la izquierda: flushleft
+% 	- Desplazado a la derecha: flushright
+% Donde el texto justificado no se define en ningún entorno
+% debido a que es el predeterminado de LaTeX.
+
+% Se debe recordar que para utilizar un entorno se debe
+% abrir el mismo mediante \begin{nombre-del-entorno} y 
+% luego cerrarlo mediante \end{nombre-del-entorno}.
+
+% Por otro lado, si se requiere utilizar líneas de código,
+% se aplica:
+%	-Centrado: \centering
+%	-Desplazado a la izquierda: \raggedleft
+%	-Desplazado a la derecha: \raggedright
+% Donde nuevamente el texto justificado no se define mediante
+% ningún comando ya que es el predeterminado de LaTeX.
+ 
+% Aquí se debe tener en cuenta que el texto se modificará
+% a partir de la línea en la que se presenta el código para 
+% abajo, hasta que exista un cambio de posicionamiento. 
+
+%Además, como no se presenta comando para volver a justificar
+%el texto (al menos no sin paquetes) todo el documento quedará
+%con el último posicionamiento seleccionado.
+ 	
+% Una última diferencia entre ambos casos, es que al utilizar 
+% entornos, se comienza siempre un nuevo párrafo. Por otro lado,
+% al utilizar las líneas de comando, no.
+
+\documentclass{article}
+
+\begin{document}
+
+	\begin{center}
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum. Posuere morbi leo urna molestie at.
+	\end{center}	
+
+	\begin{flushleft}
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum. Posuere morbi leo urna molestie at.
+	\end{flushleft}
+	
+	\begin{flushright}
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum. Posuere morbi leo urna molestie at.
+	\end{flushright}
+	
+	
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum. Posuere morbi leo urna molestie at.
+	
+	\raggedright
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum. Posuere morbi leo urna molestie at.
+	
+	\raggedleft
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum. Posuere morbi leo urna molestie at.
+	
+	\centering
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum. Posuere morbi leo urna molestie at.
+	
+
+	
+\end{document} 
+ 
