@@ -1,0 +1,87 @@
+%---------------------COLOR EN EL TEXTO---------------------------%
+
+%---OBJETIVO---%
+					   
+% Conocer el paquete que permite alterar el color del texto.
+
+%-------------------------------------------------------------------%
+
+
+% Enfatizar el texto en un documento LaTeX puede no resultar satisfactorio 
+% a partir de las herramientas de subrayado, negrita e itálica. Por esta 
+% razón se implementa el siguiente paquete:
+% 
+% 
+% 					xcolor
+% 
+% 
+% para alterar el color del texto.
+
+% El paquete xcolor permite trabajar con colores preestablecidos o añadir
+% nuestros propios colores para así poseer mayor personalización.
+%
+% Los colores preestablecidos del sistema son:
+% 
+% - Azul - El cual se llama con el código: blue.
+% - Verde - El cual se llama con el código: green.
+% - Amarillo - El cual se llama con el código: yellow.
+% - Rojo - El cual se llama con el código: red.
+%
+% entre muchos otros cuales se encuentran enlistados junto a este archivo .TeX.
+%
+% Por otro lado, para poder definir nuestro propio color se utiliza el comando:
+% 
+%				\definecolor{~nombre~}{~códificación~}{~código~} 
+%
+% donde el nombre del color es con el cual nos referiremos al mismo al querer
+% usarlo. La codificación es el tipo de código de color que se utilizará para 
+% definir el mismo, y el código es referente a esta codificación.
+% 
+% Algunas codificaciones presentes en el paquete son:
+% 
+% - codificación: "grey" -> rango de valores de código: "0 a 1" (un solo valor).
+% - codificación: "rgb"  -> rango de valores de código: "0 a 1" (tres valores).
+% - codificación: "RGB"  -> rango de valores de código: "0 a 255" (tres valores).
+% - codificación: "HEX"  -> código (combinación de letras y números).
+% - codificación: "cmyk" -> rango de valores de código: "0-1" (cuatro valores).
+%
+
+% Conocido esto para alterar el color del texto se utiliza el comando.
+%
+%   				\color{~nombre~}{~Texto a colorear~}
+%	
+% donde el nombre representa algún nombre ya predefinido como: red, blue, yellow, etc. o
+% algún nombre que nosotros hayamos definido.
+
+
+\documentclass{article}
+
+%Llamado del paquete.
+\usepackage{xcolor}
+
+%Definición de color fuera del documento.
+\definecolor{Color1}{RGB}{145,10,200}
+
+
+\begin{document}
+
+%Definición de color dentro del documento.
+\definecolor{Color2}{RGB}{0,10,200}
+
+%Texto de relleno.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Sed id sagittis nulla. Pellentesque venenatis molestie viverra. 
+Morbi tincidunt mauris odio, ut blandit quam eleifend et. 
+
+%Ejemplo de aplicación del paquete
+
+%Uso del comando \color{}{}
+
+%Texto relleno alterado
+\color{red}{Lorem ipsum dolor sit amet, consectetur adipiscing elit.}
+\color{Color1}{Sed id sagittis nulla. Pellentesque venenatis molestie viverra.} 
+\color{Color2}{Morbi tincidunt mauris odio, ut blandit quam eleifend et.}
+
+
+\end{document}
+

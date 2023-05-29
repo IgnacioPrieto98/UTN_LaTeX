@@ -1,0 +1,64 @@
+%---------------------TAMAÑO DE FUENTE---------------------------%
+
+%---OBJETIVO---%
+					   
+% Conocer el paquete que permite alterar el tamaño de fuente de texto.
+
+%-------------------------------------------------------------------%
+
+
+% Para alterar un la altura de un texto en un documento LaTeX puede no
+% bastar con los valores de alturas por defecto. Debido a esto se recurre
+% al paquete:
+% 
+%
+%		 					anyfontsize
+%
+%
+% el cual mediante el comando 
+% 
+% 
+% 				   \fontsize{~tamaño~}{~separación~}
+%
+%
+% permite definir un tamaño de texto a partir de dos distancias.
+%
+% Para seleccionar el texto el cual se quiere alterar, se define posterior a 
+% \fontsize el comando
+% 
+% 				    \selectfont{~texto a modificar~}
+% 
+% donde en las llaves se indica el texto que se desea modificar.
+	
+\documentclass{article}
+
+%Llamado del paquete.
+\usepackage{anyfontsize}
+
+\begin{document}
+
+%Texto de relleno.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Sed id sagittis nulla. Pellentesque venenatis molestie viverra. 
+Morbi tincidunt mauris odio, ut blandit quam eleifend et. 
+Integer eu augue nec sem sagittis euismod. 
+Nullam dapibus, mauris non pretium malesuada, risus justo consectetur libero, non aliquet urna turpis eu dolor. 
+
+
+%Ejemplo de aplicación del paquete
+
+%Uso del comando \fontsize y \selectfont
+\fontsize{1cm}{1cm} \selectfont{
+
+%Texto relleno alterado
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Sed id sagittis nulla. Pellentesque venenatis molestie viverra. 
+Morbi tincidunt mauris odio, ut blandit quam eleifend et. 
+Integer eu augue nec sem sagittis euismod. 
+Nullam dapibus, mauris non pretium malesuada, risus justo consectetur libero, non aliquet urna turpis eu dolor. 
+
+
+}
+
+\end{document}
+
