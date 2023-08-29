@@ -1,0 +1,358 @@
+%BEGIN_FOLD (PAQUETES DEL ESTILO)
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{xcolor}
+\usepackage[margin={1in,1.5in,1in,1in}]{geometry}
+\usepackage{apacite}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage[doublespacing]{setspace}
+\usepackage{graphics}
+\graphicspath{{./Imagenes/}}
+\usepackage{listings}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{subcaption}
+\usepackage{titletoc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,scopes,shadows,calc,positioning}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage[explicit]{titlesec}
+\usepackage{multicol}
+\newlength{\bb} %VARIABLE QUE ASIGNA TEXTO PARA DETERMINAR SU LONGITUD
+\def\condicional{0}
+\usepackage{anyfontsize}
+\usepackage{minitoc}
+\usepackage{multicol}
+%END_FOLD
+
+%BEGIN_FOLD
+
+%minitoc
+\mtcsetfont{minitoc}{section}{\color{C3}\sffamily \small \selectfont \bfseries}
+\mtcsetfont{minitoc}{subsection}{\color{C3}\sffamily\footnotesize}
+\mtcsetoffset{minitoc}{-3em}
+\mtcsettitle{minitoc}{}
+\mtcsetrules{minitoc}{off}
+\setlength{\mtcindent}{0.025\paperwidth}
+\renewcommand{\mtcoffset}{-1.5cm}
+
+
+%END_FOLD
+
+
+%BEGIN_FOLD (DEFINICIÓN DE COLORES DE PAQUETE "xcolor")
+
+%Colores para entorno del documento.
+\definecolor{C1}{RGB}{119,180,188} %AZUL 1 - UTN 
+\definecolor{C3}{RGB}{4,132,168} %AZUL 2 - UTN 
+\definecolor{C4}{RGB}{90,188,204} %AZUL 3 - UTN 
+\definecolor{C5}{RGB}{4,102,133} %AZUL 4 - UTN 
+
+\definecolor{C2}{RGB}{229,229,221} %GRIS - UTN
+
+%Colores para código.
+\definecolor{C101}{RGB}{120,120,120} %Color comentarios.
+\definecolor{C102}{RGB}{0,80,120} %Color comentarios.
+\definecolor{C103}{RGB}{120,60,40} %Color comentarios.
+\definecolor{C104}{RGB}{120,60,40} %Color comentarios.
+\definecolor{C105}{RGB}{120,120,5} %Color comentarios.
+%END_FOLD
+
+%BEGIN_FOLD (CONFIGURACIÓN DE PAQUETE "tikz")
+
+%END_FOLD
+
+%BEGIN_FOLD (MODIFICADORES DE PAQUETE "listings")
+
+\lstset{
+	%Lenguaje de programación.
+	language=TeX,
+	commentstyle = {\normalfont \color{C101}},
+	%Estilo de caja.
+	numbers = left,
+	backgroundcolor = \color{C1!05!white},
+	frame = shadowbox,
+	rulesepcolor = \color{C1!90!white},
+	basicstyle = \ttfamily,
+	%Enfasis en el código.
+	emph=[1]{
+		documentclass,
+		usepackage,
+		begin,end,
+		section,subsection,chapter,part,subsubsection
+	}, emphstyle=[1]{\color{C102}},
+	emph=[2]{
+		book,
+		article,
+		report,
+		letter,
+		beamer
+	}, emphstyle=[2]{\color{C103}},
+	emph=[3]{
+		document,
+		figure
+		},
+	emphstyle=[3]{\color{green!50!black}},
+	emph=[4]{
+		tiny,
+		scriptsize,
+		footnotesize,
+		small,
+		normalsize,
+		large,
+		Large,
+		LARGE,
+		huge,
+		Huge
+	},emphstyle = [4]{\color{C103}},
+	emph=[4]{flushleft,center,flushright},
+	emph=[5]{textbf,textit,underline,includegraphics,centering,caption},emphstyle=[5]{\color{C103}},
+	emph=[6]{graphicx,tabularx,xcolor},emphstyle=[6]{\color{C105}},
+	emph=[7]{width,height,angle,scale,},emphstyle=[7]{\color{C1}},
+	%Español
+	%BEGIN_FOLD
+	literate=%
+	{á}{{\'a}}1
+	{í}{{\'i}}1
+	{é}{{\'e}}1
+	{ý}{{\'y}}1
+	{ú}{{\'u}}1
+	{ó}{{\'o}}1
+	{ě}{{\v{e}}}1
+	{š}{{\v{s}}}1
+	{č}{{\v{c}}}1
+	{ř}{{\v{r}}}1
+	{ž}{{\v{z}}}1
+	{ď}{{\v{d}}}1
+	{ť}{{\v{t}}}1
+	{ň}{{\v{n}}}1                
+	{ů}{{\r{u}}}1
+	{Á}{{\'A}}1
+	{Í}{{\'I}}1
+	{É}{{\'E}}1
+	{Ý}{{\'Y}}1
+	{Ú}{{\'U}}1
+	{Ó}{{\'O}}1
+	{Ě}{{\v{E}}}1
+	{Š}{{\v{S}}}1
+	{Č}{{\v{C}}}1
+	{Ř}{{\v{R}}}1
+	{Ž}{{\v{Z}}}1
+	{Ď}{{\v{D}}}1
+	{Ť}{{\v{T}}}1
+	{Ň}{{\v{N}}}1                
+	{Ů}{{\r{U}}}1 
+	%END_FOLD
+}
+\renewcommand{\lstlistingname}{Código}
+
+%END_FOLD
+
+%BEGIN_FOLD (MODIFICADORES DEL PAQUETE "hyperref")
+
+\hypersetup{
+	frenchlinks,
+	colorlinks = true,
+	urlcolor= blue,
+	citecolor= red,
+	linkcolor = black,
+}
+
+%END_FOLD
+
+%BEGIN_FOLD (DEFINICIÓN DE DISTANCIAS)
+
+%END_FOLD
+
+%BEGIN_FOLD (NUEVOS COMANDOS)
+	
+	\def\bibliografia{-Insertar bibliografía-}
+	\newcommand{\reg}{$^{\text{\textcircled{\tiny R}}}$}
+	\newcommand{\col}{\color{C5}}
+	\newcommand{\DistMargenes}{1in}
+	\newcommand{\CantCapitulos}{3}
+	\newcommand{\CantLogos}{2}
+	\newcommand{\Bib}[1]{\renewcommand{\bibliografia}{#1}}
+%END_FOLD
+
+%BEGIN_FOLD (CUADROS PERSONALIZADOS DE PAQUETE "tcolorbox")
+
+%Cuadro de advertencia
+\newtcolorbox{Adverten}
+{
+skin = enhancedmiddle jigsaw,
+arc = 0mm,
+breakable,
+arc is angular,
+boxrule = 0mm,
+enhanced,
+colback=C2!50!white,
+overlay={
+	\draw[C2!50!white,line width=1pt]	($ (frame.north west) - (0,0) $)--(frame.north east)--($ (frame.south east) + (0,2.5mm) $)--($ (frame.south east) + (-2.5mm,0) $)--($ (frame.south west)-(0,0) $)--cycle;
+	\filldraw[C1,line width=1pt] ($ (frame.north west) - (2in,-.5pt) $) rectangle ($ (frame.south west) + (0,-.5pt) $);
+	\node at ($ (frame.west) - (0.5in,0) $) {\textcolor{white}{\Huge ¡ !}};
+	\fill[C1,line width=0.9pt] ($ (frame.south east) + (0,2.5mm) $)--($ (frame.south east) + (-2.5mm,0) $)--($ (frame.south east) + (-3mm,3mm) $)--cycle;
+},
+}
+
+%Cuadro de concepto
+\newtcolorbox{Concep}
+{
+	skin = enhancedmiddle jigsaw,
+	arc = 0mm,
+	breakable,
+	arc is angular,
+	boxrule = 0mm,
+	enhanced,
+	colback=C2!50!white,
+	overlay={
+	\draw[C2!50!white,line width=1pt]	($ (frame.north west) - (0,0) $)--(frame.north east)--($ (frame.south east) + (0,2.5mm) $)--($ (frame.south east) + (-2.5mm,0) $)--($ (frame.south west)-(0,0) $)--cycle;
+	\filldraw[C1,line width=1pt] ($ (frame.north west) - (2in,-.5pt) $) rectangle ($ (frame.south west) + (0,-.5pt) $);
+	\node at ($ (frame.west) - (0.5in,0) $) {\textcolor{white}{\Huge ¿ ?}};
+	\fill[C1,line width=0.9pt] ($ (frame.south east) + (0,2.5mm) $)--($ (frame.south east) + (-2.5mm,0) $)--($ (frame.south east) + (-3mm,3mm) $)--cycle;
+	},
+}
+
+%END_FOLD
+
+%BEGIN_FOLD (FORMATOS DE HOJA PERSONALIZADOS PAQUETE "fancyhdr")
+
+\fancypagestyle{HojaContenido}
+{
+	\pagecolor{white}
+	\renewcommand{\headrulewidth}{0pt}
+	\fancyhf{}
+	\fancyhead[C]{
+		\begin{tikzpicture}[overlay,remember picture]
+				\node at (0,0.5in) {\includegraphics[width = \textwidth]{ENCABEZADO UTN.png}};
+				\node at ($ (current page.north) - (0,0.7\DistMargenes)$) {\scshape \leftmark};
+		\end{tikzpicture}
+	}
+	\fancyfoot[C]
+	{
+		\begin{tikzpicture}[overlay,remember picture]
+			\node at (0,-0.8in) {\includegraphics[width = \textwidth]{PIE UTN.png}};
+			\node at ($ (current page.south) + (0.45\textwidth,0.31\DistMargenes)$) {{\fontfamily{put} \selectfont \thepage\ de \pageref*{LastPage}}};
+		\end{tikzpicture}
+	}
+	
+}
+%END_FOLD
+
+%BEGIN_FOLD (MODIFICACION DE SECCIONES Y SUBSECCIONES CON PAQUETE "titlesec")
+
+\newcommand{\SecTitle}[1]
+{%
+ \begin{tikzpicture}[overlay, remember picture,node distance = 1.5mm]
+ 	\fill[C5,opacity = 0.5] (0.95\textwidth,0) rectangle (\textwidth,1);
+ 	\fill[C4,opacity = 0.5] (0.92\textwidth,0) rectangle (0.94\textwidth,1);
+ 	\fill[C1,opacity = 0.5] (0.90\textwidth,0) rectangle (0.91\textwidth,1);
+	\fill[C5,opacity = 0.5] (1,0) rectangle (0.89\textwidth,0.1);
+ 	\node (Numero) at (0.05\marginparwidth,0.45) 
+ 	[minimum width = 1.3cm,
+ 	rectangle,
+ 	fill = C2,
+ 	minimum height = 1cm,
+ 	text centered]
+ 	{
+ 		{{\fontfamily{put}\selectfont\LARGE\thesection}}
+ 	};
+ 	\node[right = of Numero]  {{\fontfamily{put} \selectfont \Large #1}  \fontfamily{cmr} \selectfont};
+ 	\node[text width=\linewidth,align = right] at (0.5\textwidth,-0.45) {
+ 	{\fontfamily{put} \small \selectfont \emph{B.C.} \bibliografia.}};
+ \end{tikzpicture}
+ \vspace{.15cm}
+}
+
+\titleformat{name=\section}
+{\normalfont}{}{0em}
+{\SecTitle{#1}}[\addvspace{4ex}]
+
+
+\newcommand{\subsubsecTitle}[1]
+{%
+	{\color{C5} \large \underline{\textbf{#1}}}
+	\vspace{-0.7cm}
+}
+
+\titleformat{name=\subsubsection}
+{\normalfont}{}{0em}
+{\subsubsecTitle{#1}}[\addvspace{4ex}]
+
+\newcommand{\chaptertitle}[1]
+{
+	
+	
+	\ifnum\thechapter>\condicional
+	
+	\settowidth{\bb}{\LARGE \scshape #1}
+	
+	\begin{tikzpicture}[remember picture,overlay,node distance=2mm]
+		\node (CAP) at ($ (current page.north west)+(0.35\paperwidth,-0.1\paperheight)$) 
+		[
+		fill = C2,
+		minimum width = 0.7\paperwidth, 
+		minimum height = 0.2\paperheight,
+		text width = 0.7\paperwidth,
+		text centered
+		] 
+		{
+			{\fontsize{30}{2cm} \color{black} \selectfont \bfseries \scshape \rmfamily \nolinebreak #1}
+		};
+		\node (NUM) at ($ (current page.north east)-(0.15\paperwidth,0.1\paperheight)$) 
+		[
+		fill = C1,
+		minimum width = 0.3\paperwidth, 
+		minimum height = 0.2\paperheight,
+		text centered
+		] 
+		{
+			\begin{tabular}{c}
+				{\fontsize{7mm}{10mm} \color{white} \selectfont \scshape  Capítulo}\\
+				\\
+				{\fontsize{0.2\paperwidth}{5mm} \bfseries \selectfont \scshape \color{white} \thechapter}
+			\end{tabular}
+		};
+	\end{tikzpicture}
+	
+	
+	\begin{tikzpicture}[remember picture,overlay,node distance=2mm]
+		\node (TIT) at (0.5\textwidth,0.5) {\huge \scshape \textbf{Contenido}};
+	\end{tikzpicture}
+	
+	\begin{tcolorbox}[colback=C2!50!white,text fill=center,colframe=white,arc=0pt]
+		\hspace{1cm}\begin{minipage}{\textwidth}
+			\minitoc
+		\end{minipage}
+	\end{tcolorbox}
+
+	\vspace{-0.2cm}
+	
+	\else
+	
+	\begin{center}
+		\Huge \scshape Indice
+	\end{center}
+	
+	\fi
+}
+
+\titleformat{name=\chapter}
+{\normalfont}{}{0em}
+{\chaptertitle{#1}}[\addvspace{4ex}]
+
+%END_FOLD
+
+
+%END_FOLD
+
+%BEGIN_FOLD 
+	
+%END_FOLD
