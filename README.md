@@ -8,5 +8,9 @@ Este repositorio posee como objetivo:
 
 ## Uso de 00-PLANTILLA-V1.0
 
-El uso de esta plantilla permite, mediante muchas simplificaciones de código, realizar un documento de alta calidad tipográfica con un básico entendimiento de LaTeX.
+El uso de esta plantilla permite, mediante muchas simplificaciones de código, realizar un documento de alta calidad tipográfica con un básico entendimiento de LaTeX. 
 
+Como medida fundamental para el uso de la plantilla se debe tener en cuenta que la misma debe ser compilada en *XeLaTeX*, debido al uso de fuente *montserrat*. Para onfigurar esto se realiza la siguiente secuencia de pasos dentro de *TeX-Studio*:
+
+- Se ingresa a *Opciones* en la barra de herramientas de *TeX-Studio*.
+- Dentro de Opciones se ingresa a 🔧*Configurar TeX-Studio* 
