@@ -13,7 +13,7 @@ La intensión de los documentos a realizar es informar sobre los contenidos pres
 La estructura a seguir será:
 
 - Cada **UNIDAD** de la cátedra representará un **CAPÍTULO**.
-- Cada **ELEMENTO DENTRO DE LA UNIDAD** de la cátedra representará un **Sección**.
+- Cada **ELEMENTO DENTRO DE LA UNIDAD** de la cátedra representará un **SECCIÓN**.
 
 En ciertas ocasiones extraordinarias, cuales se presenten debido a una dificultad en la interpretación del legajo de cátedra, se procederá a dialogar con el docente a cargo. En caso de esto no ser posible, o no presentar una solución, se definirá algún título representativo de la unidad o la sección, con el objetivo de continuar con el procedimiento.
 
@@ -32,4 +32,23 @@ Como medida fundamental para el uso de la plantilla se debe tener en cuenta que 
 - Dentro de la ventana emergente 🔧configurar TeX-Studio, sobre la barra izquierda, se ingresa a *compilar*.
 - Seleccionado compilar, se altera la opción *Compilador por defecto* cambiando la misma a: *XeLaTeX*.
 
+### Estructura de los archivos en la plantilla
+
+La carpeta *00-PLANTILLA-V1.0* presente en el repositorio posee los siguientes elementos:
+
+- Base.tex
+
+Archivo de .TeX cual vincula el estilo del documento y las diferentes unidades que estarán añadidas al mismo.
+  
+- STY-UTN-LTX-CATEDRAS.sty
+
+Archivo .Sty cual posee las configuraciones generales del estilo del documento.
+
+- Capitulos (carpeta de archivos).
+
+Carpeta la cual contiene los archivos .TeX referidos a cada una de las unidades.
+
+- ElementosBase (carpeta de archivos).
+
+Carpeta la cual contiene archivos .png (imagenes) cuales conforman la estética del documento, y un archivo .TeX el cual representa la configuración de la primer página del documento.
 
