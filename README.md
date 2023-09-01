@@ -1,4 +1,5 @@
-# UTN-FRRq - TALLER DE LATEX 
+# <span style="color:blue"> UTN-FRRq - TALLER DE LATEX </span> 
+
 
 Este repositorio posee como objetivo:
 
@@ -6,7 +7,7 @@ Este repositorio posee como objetivo:
 - Facilitar el manejo de documentos realizados por los integrantes del taller de LaTeX.
 - Ofrecer diferentes plantillas para desarrollos académicos como: proyectos finales, trabajos prácticos, monografías, etc.
 
-## Estructura de los documentos referidos a cátedras de UTN - FRRq
+## # <span style="color:blue"> Estructura de los documentos referidos a cátedras de UTN - FRRq  </span>
 
 La intensión de los documentos a realizar es informar sobre los contenidos presentes en la cátedra. Por esta razón se propone el trabajo a partir de los *legajos de cátedra* de cada una de ellas. 
 
@@ -19,11 +20,11 @@ En ciertas ocasiones extraordinarias, cuales se presenten debido a una dificulta
 
 Se debe tener en cuenta que los documentos a realizar tienen el objetivo de estar avalados por el jefe de cátedra. Por esta razón resulta fundamental poseer una retroalimentación del mismo siempre que sea posible.
 
-## Uso de 00-PLANTILLA-V1.0
+## <span style="color:blue"> Uso de 00-PLANTILLA-V1.0  </span>
 
 El uso de esta plantilla permite, mediante muchas simplificaciones de código, realizar un documento de alta calidad tipográfica con un básico entendimiento de LaTeX. 
 
-### Configuración previa en TeX-Studio
+### <span style="color:blue"> Configuración previa en TeX-Studio
 
 Como medida fundamental para el uso de la plantilla se debe tener en cuenta que la misma debe ser compilada en *XeLaTeX*, debido al uso de fuente *montserrat*. Para onfigurar esto se realiza la siguiente secuencia de pasos dentro de *TeX-Studio*:
 
@@ -32,7 +33,7 @@ Como medida fundamental para el uso de la plantilla se debe tener en cuenta que 
 - Dentro de la ventana emergente 🔧configurar TeX-Studio, sobre la barra izquierda, se ingresa a *compilar*.
 - Seleccionado compilar, se altera la opción *Compilador por defecto* cambiando la misma a: *XeLaTeX*.
 
-### Estructura de los archivos en la plantilla
+### <span style="color:blue"> Estructura de los archivos en la plantilla  </span>
 
 La carpeta *00-PLANTILLA-V1.0* presente en el repositorio posee los siguientes elementos:
 
@@ -52,7 +53,7 @@ Carpeta la cual contiene los archivos .TeX referidos a cada una de las unidades.
 
 Carpeta la cual contiene archivos .png (imagenes) cuales conforman la estética del documento, y un archivo .TeX el cual representa la configuración de la primer página del documento.
 
-### Uso de plantilla
+### <span style="color:blue"> Uso de plantilla  </span>
 
 El uso de la plantilla consta de una configuración de datos, cual se realiza una única vez por documento al comienzo o al final; y un desarrollo de contenido. Para realizar la configuración de datos, se procede a ingresar a *Base.TeX* y configurar:
 
