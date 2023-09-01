@@ -1,0 +1,56 @@
+	\begin{titlepage}
+	\begin{tikzpicture}[remember picture,overlay,node distance=2mm]
+		\fill[C5] ($ (current page.north east)-(.8\marginparwidth,0)$) rectangle ($ (current page.south east)$);
+	\end{tikzpicture}
+	\thispagestyle{empty}
+	\begin{flushleft}
+		{\fontsize{40}{20}\fontspec{Montserrat} \titulo}\\
+		\vspace{.5cm}
+		{\fontsize{15}{20} \fontspec{Montserrat} \subtitulo}
+	\end{flushleft}
+	\vfill
+	\includegraphics[width=0.9\textwidth]{ElementosBase/UTN-LTX-LOGOS}
+	\vspace{-1cm}
+	\newpage
+	
+	\begin{tikzpicture}[remember picture,overlay,node distance=2mm]
+		\fill[C5] ($ (current page.north east)-(.8\marginparwidth,0)$) rectangle ($ (current page.south east)$);
+	\end{tikzpicture}
+	
+	{\color{white} UTN}
+	
+	\vfill
+	
+	\begin{flushright}
+		\begin{minipage}{0.4\textwidth}
+			{\fontspec{Montserrat}
+				\hrule
+				\vspace{2mm}
+				\begin{flushright}
+					\textbf{Fecha de finalización}\\
+					\today\\
+				\end{flushright}
+				\hrule
+				\vspace{2mm}
+				\begin{flushright}
+					\textbf{Desarrolladores}\\
+					\autor\\
+				\end{flushright}
+				\hrule
+				\vspace{2mm}
+				\begin{flushright}
+					\textbf{Docente supervisor}\\
+					\supervisor\\
+				\end{flushright}
+				\hrule
+				\vspace{2mm}
+				\begin{flushright}
+					\textbf{Localidad}\\
+					Reconquista Santa Fe\\
+				\end{flushright}
+				\hrule
+			}
+		\end{minipage}
+	\end{flushright}
+	
+\end{titlepage}

@@ -266,14 +266,14 @@ overlay={
 	\fancyhf{}
 	\fancyhead[C]{
 		\begin{tikzpicture}[overlay,remember picture]
-				\node at (0,0.5in) {\includegraphics[width = \textwidth]{ENCABEZADO UTN.png}};
+				\node at (0,0.5in) {\includegraphics[width = \textwidth]{ElementosBase/UTN-ENCABEZADO.png}};
 				\node at ($ (current page.north) - (0,0.7\DistMargenes)$) {\fontspec{Montserrat} \leftmark};
 		\end{tikzpicture}
 	}
 	\fancyfoot[C]
 	{
 		\begin{tikzpicture}[overlay,remember picture]
-			\node at (0,-0.8in) {\includegraphics[width = \textwidth]{PIE UTN.png}};
+			\node at (0,-0.8in) {\includegraphics[width = \textwidth]{ElementosBase/UTN-PIE.png}};
 			\node at ($ (current page.south) + (0.45\textwidth,0.31\DistMargenes)$) {{\fontspec{Montserrat} \thepage\ de \pageref*{LastPage}}};
 		\end{tikzpicture}
 	}
@@ -400,9 +400,6 @@ overlay={
 \titleformat{name=\chapter}
 {\normalfont}{}{0em}
 {\chaptertitle{#1}}[\addvspace{4ex}]
-
-%END_FOLD
-
 
 %END_FOLD
 

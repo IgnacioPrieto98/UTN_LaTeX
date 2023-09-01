@@ -1,0 +1,68 @@
+\documentclass[oneside]{book}
+\usepackage{lipsum}
+\usepackage{STY-UTN-LTX-CATEDRAS}
+
+%---PARÁMETROS PARA DEFINIR---%
+\def\supervisor{Supervisor}
+\def\titulo{Título del documento}
+\def\subtitulo{Subtítulo del documento}
+\def\autor{
+	Autor de documento 1\\
+	Autor de documento 2
+	}
+
+\dominitoc
+
+%---AYUDA DE COMANDOS---%
+
+%BEGIN_FOLD
+%-----------------------%
+% \Bib{-Bibliografía-}
+%
+% Uso:
+% 
+% El comando define el contenido que se presenta
+% por debajo de la sección, cual indica la bibliografía
+% de consulta. 
+%	
+% Ubicación:
+% 
+% El comando se presenta por encima del llamado 
+% al comando "\section{}".
+% 
+% Dato:
+% 
+% Es importante definir este cada vez que se llame a
+% una sección diferente.
+%
+%-----------------------%
+% \Res{-Bibliografía-}
+%
+% Uso:
+%
+% El comando define el resumen presente en el capítulo.
+%	
+% Ubicación:
+% 
+% El comando se presenta por encima del llamado 
+% al comando "\chapter{}".
+% 
+% Es importante definir este cada vez que se llame a
+% una sección diferente.
+%-----------------------%
+%END_FOLD
+
+\begin{document}
+	
+	\include{ElementosBase/PaginaTitulo.tex}
+		
+	\tableofcontents
+
+	\pagestyle{HojaContenido}
+	
+	\Res{-Resumen del capítulo-}	
+	\chapter{Título de capítulo}
+	
+	\Bib{-Bibliografía recomendada de la sección-}
+	\section{Título de la sección}
+\end{document}
