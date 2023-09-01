@@ -58,12 +58,46 @@ El uso de la plantilla consta de una configuración de datos, cual se realiza un
 
 ``` TeX
 %---PARÁMETROS PARA DEFINIR---%
-\def\supervisor{Supervisor}
-\def\titulo{Título del documento}
-\def\subtitulo{Subtítulo del documento}
+\def\supervisor{~Supervisor~}
+\def\titulo{~Título del documento~}
+\def\subtitulo{~Subtítulo del documento~}
 \def\autor{
-	Autor de documento 1\\
-	Autor de documento 2
+	~Autor de documento 1~\\
+	~Autor de documento 2~
 	}
 ```
 
+Una vez configurados estos parámetros, se procede realizar un archivo .TeX por unidad de la cátedra, y guardarlo en la carpeta de unidades y comenzar a trabajar en ellas. Para que estas unidades sean tomadas en el documento base se procede a utilizar el comando \include{~ruta de la unidad~} dentro del entorno *document* del archivo *Base.TeX*, como se muestra a continuación:
+
+``` TeX
+\begin{document}
+	
+	\include{ElementosBase/PaginaTitulo.tex}
+		
+	\tableofcontents
+
+	\pagestyle{HojaContenido}
+	
+	%Inclusión de unidadaes
+	\include{Unidades/UN1-TITULO DE LA UNIDAD} %Inclusión de la unidad 1
+	\include{Unidades/UN2-TITULO DE LA UNIDAD} %Inclusión de la unidad 2
+	\include{Unidades/UN3-TITULO DE LA UNIDAD} %Inclusión de la unidad 3
+	
+\end{document}
+
+```
+
+Creados y añadidos los archivos de las unidades, se comienza a trabajar en ellas. Para realizar esto se procede a desarrollar el contenido mediante texto e imagenes con las siguientes salvedades:
+
+- Previo a la definición del capítulo, se debe presentar el comando \Res{~Resumen~}, el cual permite incluir un resumen de cada capítulo/unidad.
+- Previo a la definición de la sección, se debe presentar el comando \Bib{~Resumen~}, el cual permite incluir una bibliografía recomendada de la sección.
+
+A continuación se presenta un ejemplo del código con dichas salvedades:
+
+``` TeX
+\Res{-Resumen del capítulo-}	
+\chapter{Título de capítulo}
+
+\Bib{-Bibliografía recomendada de la sección-}
+\section{Título de la sección}
+```
