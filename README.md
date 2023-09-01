@@ -52,3 +52,18 @@ Carpeta la cual contiene los archivos .TeX referidos a cada una de las unidades.
 
 Carpeta la cual contiene archivos .png (imagenes) cuales conforman la estética del documento, y un archivo .TeX el cual representa la configuración de la primer página del documento.
 
+### Uso de plantilla
+
+El uso de la plantilla consta de una configuración de datos, cual se realiza una única vez por documento al comienzo o al final; y un desarrollo de contenido. Para realizar la configuración de datos, se procede a ingresar a *Base.TeX* y configurar:
+
+``` TeX
+%---PARÁMETROS PARA DEFINIR---%
+\def\supervisor{Supervisor}
+\def\titulo{Título del documento}
+\def\subtitulo{Subtítulo del documento}
+\def\autor{
+	Autor de documento 1\\
+	Autor de documento 2
+	}
+```
+
