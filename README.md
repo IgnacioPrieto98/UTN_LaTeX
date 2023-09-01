@@ -1,4 +1,4 @@
-# <span style="color:blue"> UTN-FRRq - TALLER DE LATEX </span> 
+# <font color = 'blue'> UTN-FRRq - TALLER DE LATEX </font> 
 
 
 Este repositorio posee como objetivo:
